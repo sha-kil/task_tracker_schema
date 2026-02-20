@@ -1,14 +1,19 @@
 {
-  "name": "task_tracker_schema",
-  "private": false,
+  "name": "@sha-kil/task_tracker_schema",
   "version": "0.0.1",
+  "private": false,
+  "description": "",
+  "homepage": "https://github.com/sha-kil/task_tracker_schema#readme",
+  "bugs": {
+    "url": "https://github.com/sha-kil/task_tracker_schema/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sha-kil/task_tracker_schema.git"
+  },
+  "license": "ISC",
+  "author": "",
   "type": "module",
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/task_tracker_schema.cjs",
-  "module": "./dist/task_tracker_schema.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -16,10 +21,85 @@
       "require": "./dist/task_tracker_schema.cjs"
     }
   },
+  "main": "./dist/task_tracker_schema.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
+  },
+  "dependencies": {
+    "acorn": "^8.15.0",
+    "ajv": "^8.12.0",
+    "ajv-draft-04": "^1.0.0",
+    "ajv-formats": "^3.0.1",
+    "alien-signals": "^0.4.14",
+    "argparse": "^1.0.10",
+    "balanced-match": "^1.0.2",
+    "brace-expansion": "^2.0.2",
+    "compare-versions": "^6.1.1",
+    "confbox": "^0.2.2",
+    "de-indent": "^1.0.2",
+    "debug": "^4.4.3",
+    "diff": "^8.0.3",
+    "entities": "^7.0.1",
+    "esbuild": "^0.27.3",
+    "estree-walker": "^2.0.2",
+    "exsolve": "^1.0.8",
+    "fast-deep-equal": "^3.1.3",
+    "fdir": "^6.5.0",
+    "fs-extra": "^11.3.3",
+    "function-bind": "^1.1.2",
+    "graceful-fs": "^4.2.11",
+    "has-flag": "^4.0.0",
+    "hasown": "^2.0.2",
+    "he": "^1.2.0",
+    "import-lazy": "^4.0.0",
+    "is-core-module": "^2.16.1",
+    "jju": "^1.4.0",
+    "json-schema-traverse": "^1.0.0",
+    "jsonfile": "^6.2.0",
+    "kolorist": "^1.8.0",
+    "local-pkg": "^1.1.2",
+    "lodash": "^4.17.23",
+    "lru-cache": "^6.0.0",
+    "magic-string": "^0.30.21",
+    "minimatch": "^10.1.2",
+    "mlly": "^1.8.0",
+    "ms": "^2.1.3",
+    "muggle-string": "^0.4.1",
+    "nanoid": "^3.3.11",
+    "path-browserify": "^1.0.1",
+    "path-parse": "^1.0.7",
+    "pathe": "^2.0.3",
+    "picocolors": "^1.1.1",
+    "picomatch": "^4.0.3",
+    "pkg-types": "^2.3.0",
+    "postcss": "^8.5.6",
+    "punycode": "^2.3.1",
+    "quansync": "^0.2.11",
+    "require-from-string": "^2.0.2",
+    "resolve": "^1.22.11",
+    "rollup": "^4.57.1",
+    "semver": "^7.5.4",
+    "source-map": "^0.6.1",
+    "source-map-js": "^1.2.1",
+    "sprintf-js": "^1.0.3",
+    "string-argv": "^0.3.2",
+    "strip-json-comments": "^3.1.1",
+    "supports-color": "^8.1.1",
+    "supports-preserve-symlinks-flag": "^1.0.0",
+    "tinyglobby": "^0.2.15",
+    "ufo": "^1.6.3",
+    "undici-types": "^7.16.0",
+    "universalify": "^2.0.1",
+    "uri-js": "^4.4.1",
+    "vscode-uri": "^3.1.0",
+    "yallist": "^4.0.0",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@types/node": "^25.2.1",
@@ -29,5 +109,9 @@
   },
   "peerDependencies": {
     "zod": "^4.3.6"
+  },
+  "module": "./dist/task_tracker_schema.js",
+  "publishConfig": {
+    "@sha-kil:registry": "https://npm.pkg.github.com"
   }
 }
