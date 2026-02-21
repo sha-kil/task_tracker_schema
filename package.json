@@ -1,6 +1,6 @@
 {
   "name": "@sha-kil/task_tracker_schema",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "description": "",
   "homepage": "https://github.com/sha-kil/task_tracker_schema#readme",
@@ -28,7 +28,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "npx tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -103,15 +103,12 @@
   },
   "devDependencies": {
     "@types/node": "^25.2.1",
-    "typescript": "~5.9.3",
+    "typescript": "^5.9.3",
     "vite": "^7.2.4",
     "vite-plugin-dts": "^4.5.4"
   },
   "peerDependencies": {
     "zod": "^4.3.6"
   },
-  "module": "./dist/task_tracker_schema.js",
-  "publishConfig": {
-    "@sha-kil:registry": "https://npm.pkg.github.com"
-  }
+  "module": "./dist/task_tracker_schema.js"
 }
