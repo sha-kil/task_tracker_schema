@@ -17,7 +17,7 @@ export const IssueGETSchema = z.object({
   id: z.uuidv7(),
   labelIds: z.array(z.uuidv7()).default([]),
   parentId: z.uuidv7().nullable().default(null),
-  priority: z.enum(["low", "medium", "high", "urgent"]),
+  priorityId: z.uuidv7(),
   projectId: z.uuidv7(),
   startDate: z.iso.datetime().nullable().default(null),
   title: z.string(),
@@ -33,6 +33,7 @@ export const IssueCreateSchema = IssueGETSchema.omit({
   id: true,
   labelIds: true,
   updatedAt: true,
+  priorityId: true
 })
 
 export const IssueUpdateSchema = IssueGETSchema.omit({
