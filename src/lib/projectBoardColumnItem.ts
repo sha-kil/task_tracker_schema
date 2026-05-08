@@ -7,12 +7,12 @@ export const ProjectBoardColumnItemAssigneeSchema = z.object({
 })
 
 export const ProjectBoardColumnItemGetSchema = z.object({
-  assignee: ProjectBoardColumnItemAssigneeSchema.nullable(),
+  title: z.string().min(1).max(100),
   description: z.string().max(1000),
+  assignee: ProjectBoardColumnItemAssigneeSchema.nullable(),
   dueDate: z.string().nullable(),
   id: z.uuidv7(),
   issueId: z.uuidv7(),
-  title: z.string().min(1).max(100),
   position: z.number(),
 })
 
@@ -27,3 +27,7 @@ export const ProjectBoardColumnItemUpdateSchema = z.object({
   position: z.number(),
   projectBoardColumnId: z.uuidv7(),
 })
+
+export type ProjectBoardColumnItem = z.infer<typeof ProjectBoardColumnItemGetSchema>
+export type ProjectBoardColumnItemCreateData = z.infer<typeof ProjectBoardColumnItemCreateSchema>
+export type ProjectBoardColumnItemUpdateData = z.infer<typeof ProjectBoardColumnItemUpdateSchema>

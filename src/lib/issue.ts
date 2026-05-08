@@ -31,7 +31,6 @@ export const IssueCreateSchema = IssueGETSchema.omit({
   createdAt: true,
   createdById: true,
   id: true,
-  labelIds: true,
   updatedAt: true,
   priorityId: true
 })

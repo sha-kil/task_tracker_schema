@@ -27,3 +27,6 @@ export const ProjectPOSTSchema = ProjectGETSchema.omit({
 }).extend({
   ownerId: z.uuidv7(),
 })
+
+export type ProjectPostData = z.infer<typeof ProjectPOSTSchema>
+export type ProjectGetData = z.infer<typeof ProjectGETSchema>
